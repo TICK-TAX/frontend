@@ -3,132 +3,83 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Untitled</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="css/stylesdet.css">
         <style>
-      body {
-        background: #353535;
-        margin: 0;
-      }
-
-      #oneGoogleBar {
-        height: 56px;
-      }
-
-      #backgroundImage {
-        border: none;
-        height: 100%;
-        pointer-events: none;
-        position: fixed;
-        top: 0;
-        visibility: hidden;
-        width: 100%;
-      }
-
-      [show-background-image] #backgroundImage {
-        visibility: visible;
-      }
-    </style>
+        h2{text-align: center;}
+        </style>
     </head>
     <body>
 
-      <iframe id="backgroundImage"
-        src="bg.png">
-    </iframe>
+      <aside class="logo">
+        <img src = "logo.png">
+      </aside>
 
-        <!-- <div class="clearfix center">
-            <h1>TICK-TAX</h1>
-            <img src = "logo.png">
-        </div> -->
+      <div class="topnav">
+       <a href="index.html">Home</a>
+       <a href="profile.html">Profile</a>
+       <a href="finances.html">Finances</a>
+       <a href="documents.html">Documents</a>
+       <a class="active" href="payments.html">Payments</a>
+       <a href="dashboard.html">Dashboard</a>
+       <a href="calander.html">Calander</a>
+      </div>
 
-<!-- <div style="background-image: url('bg.png');"></div> -->
 
 
 
+        <!-- <div class='signup-container'> -->
+            <!-- <div class='left-container'>
+              <h1>
+                TICTAX
+              </h1>
+            </div> -->
+            <div class='right-container'>
+              <header>
+                <h2>PAYMENTS</h2>
+                <div class='set'>
+                    <div class='pets-name'>
+                      <label for='pets-name'>Calculated Total Tax</label>
+                      <input id='pets-name' placeholder="INR" type='text'>
+                    </div>
+                  </div>
 
-        <aside class="logo">
-          <img src = "C:\Project\static\image\logo.png">
-        </aside>
+                <div class='set'>
+                  <div class='pets-breed'>
+                    <label for='pets-breed'>Date</label>
+                    <input id='pets-breed' placeholder="date of payment" type='text'>
+                  </div>
+                  <!-- <div class='pets-birthday'>
+                    <label for='pets-birthday'>Receipt number</label>
+                    <input id='pets-birthday' placeholder='Receipt number' type='text'>
+                  </div> -->
+                </div>
+                <div class='set'>
+                  <div class='pets-breed'>
+                      <label for='pets-breed'>Confirm Password</label>
+                      <input id='pets-breed' placeholder="enter your password" type='text'>
+                  </div>
+                </div>
+                <!-- <div class='set'>
+                    <div class='pets-breed'>
+                      <label for='pets-breed'>Reward Confirmation</label>
+                      <input id='pets-breed' placeholder="Reward Confirmation" type='text'>
+                    </div>
+                    <div class='pets-birthday'>
+                      <label for='pets-birthday'>Reward Name</label>
+                      <input id='pets-birthday' placeholder='Reward Name' type='text'>
+                    </div>
+                </div> -->
+              </header>
+              <footer>
+                <div class='iset'>
+                  <!-- <button id='back'>Back</button> -->
+                  <button id='next'>
+                    <a href="payments2.html" style="color: #FFFFFF">Next</a>
+                  </button>
+                </div>
+              </footer>
+            </div>
+          </div>
 
-        <div class="topnav">
-         <a class="active" href="index.html">Home</a>
-         <a href="profile.html">Profile</a>
-         <a href="finances.html">Finances</a>
-         <a href="documents.html">Documents</a>
-         <a href="payments.html">Payments</a>
-        </div>
-
-        <div class="login">
-
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>Create Account</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Log In</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-			<button>Log In</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>Already a member? Just log in and do your payments efficiently!</p>
-				<button class="ghost" id="signIn">Log In</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Hello There!</h1>
-				<p>New to us? Join now to make your life a lot easier!</p>
-				<button class="ghost" id="signUp">Sign Up</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- <footer>
-	<p>
-		Created with <i class="fa fa-heart"></i> by
-		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-		- Read how I created this and how you can join the challenge
-		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
-	</p>
-</footer> -->
-        </div>
-        <script>
-            const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
