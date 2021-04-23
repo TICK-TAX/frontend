@@ -133,6 +133,9 @@ padding: 0;
   justify-content:center;
   margin: 5px;
 }
+.set .ipets-birthday #ipets-birthday{
+  width: 125%;
+}
 .right-container .set {
   display: flex;
   justify-content: space-between;
