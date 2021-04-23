@@ -191,11 +191,12 @@ padding: 0;
   font-family: "Montserrat", sans-serif;
 }
 .right-container footer #back {
-  background: #fff;
+  background: #1e2833;
   transition: 0.2s all ease-in-out;
+  color: #FFFFFF
 }
 .right-container footer #back:hover {
-  background: #171A2B;
+  background: #0096C7;
   color: white;
 }
 .right-container footer #next {
@@ -203,6 +204,7 @@ padding: 0;
   background: #1e2833;
   border: 1px solid transparent;
   color: #fff;
+  text-decoration-color: #FFFFFF;
 }
 .right-container footer #next:hover {
   background: #0096C7;
