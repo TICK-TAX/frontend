@@ -1,182 +1,136 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Untitled</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-          body {
-            background: #1e2833;
-            margin: 0;
-          }
+<html lang="en" dir="ltr">
+  <head>
+    <title>Index</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesfinal.css">
+    <link rel="stylesheet" href="../css/stylesdet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-          body, html {height: 100%;}
+    <style>
+      /* body, html {height: 100%;} */
 
-      .   bg {
-  /* The image used */
-           background-image: url("img_girl.jpg");
+  .   bg {
+/* The image used */
+       background-image: url("img_girl.jpg");
 
-  /* Full height */
-           height: 100%;
+/* Full height */
+       height: 100%;
 
-  /* Center and scale the image nicely */
-           background-position: center;
-           background-repeat: no-repeat;
-           background-size: cover;
+/* Center and scale the image nicely */
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
 }
 
-      /* div {background-image: url('bg.png');} */
+  /* div {background-image: url('bg.png');} */
 
-      /* #backgroundImage {
-        border: none;
-        height: 100%;
-        pointer-events: none;
-        position: fixed;
-        top: 0;
-        visibility: visible;
-        width: 100%;
-      } */
+  /* #backgroundImage {
+    border: none;
+    height: 100%;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    visibility: visible;
+    width: 100%;
+  } */
+  button:hover{
+    background-color: #FFFFFF;
+    color: #1e2833;
+    text-decoration: underline;
+  }
+  button.first{
+    background-color: #1e2833;
+  }
+  button.first:hover{
+    background-color: #000000;
+    text-decoration: underline;
+  }
 
-      button:hover{
-        background-color: #FFFFFF;
-        color: #1e2833;
-        text-decoration: underline;
-      }
-      button.first{
-        background-color: #1e2833;
-      }
-      button.first:hover{
-        background-color: #000000;
-        text-decoration: underline;
-      }
-      .login{
-        transform: translate(275px, 0px);
-      }
-    </style>
-    </head>
-    <body>
-
-      <!-- <iframe id="backgroundImage"
-        src="bg.png">
-    </iframe> -->
-
-        <!-- <div class="clearfix center">
-            <h1>TICK-TAX</h1>
-            <img src = "logo.png">
-        </div> -->
-
-<!-- <div style="background-image: url('bg.png');"></div> -->
+</style>
 
 
+  </head>
+  <body>
+    <div class="topnav">
+     <a href="home.html">Home</a>
+     <a  href="profile.html">Profile</a>
+     <a href="finances.html">Finances</a>
+     <a href="documents.html">Documents</a>
+     <a href="payments.html">Payments</a>
+     <a href="dashboard.html">Dashboard</a>
+     <a href="calander.html">Calander</a>
+    </div>
 
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+          <form class="#" action="index.html" method="post">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-google"></a>
+              <a href="#" class="fa fa-twitter"></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+      			<input type="email" placeholder="Email" />
+      			<input type="password" placeholder="Password" />
+            <button class="first">
+              <a href="home.html" style="color: #FFFFFF">Sign Up</a>
+            </button>
+          </form>
+      </div>
 
-        <!-- <aside class="logo">
-          <img src = "logo.png">
-        </aside> -->
-
-        <!-- <div class="topnav">
-         <a>Home</a>
-         <a>Profile</a>
-         <a>Finances</a>
-         <a>Documents</a>
-         <a>Payments</a>
-         <a>Dashboard</a>
-         <a>Calander</a>
-        </div> -->
-        <!-- <div style="background-image: url("bg.png");"></div> -->
-
-
-        <div class="login">
-
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>Create Account</h1>
-			<div class="social-container">
-				<!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
-        <!-- <a
-          class="social"
-          style="background-color: #ac2bac;"
-          href="#!"
-          role="button"><i class="fab fa-instagram"></i></a>
-          <a
-            class="social"
-            style="background-color: #ac2bac;"
-            href="#!"
-            role="button"><i class="fab fa-instagram"></i></a> -->
+      <div class="form-container sign-in-container">
+    		<form action="#">
+    			<h1>Log In</h1>
+    			<div class="social-container">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-google"></a>
             <a href="#" class="fa fa-twitter"></a>
-			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-        <button class="first">
-          <a href="home.html" style="color: #FFFFFF">Sign Up</a>
-        </button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Log In</h1>
-			<div class="social-container">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-google"></a>
-        <a href="#" class="fa fa-twitter"></a>
-			</div>
-			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-      <button class="first">
-        <a href="home.html" style="color: #FFFFFF">Log In</a>
-      </button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>Already a member? Just log in and do your payments efficiently!</p>
-				<button class="ghost" id="signIn">Log In</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Hello There!</h1>
-				<p>New to us? Join now to make your life a lot easier!</p>
-				<button class="ghost" id="signUp">Sign Up</button>
-			</div>
-		</div>
-	</div>
-</div>
+    			</div>
+    			<span>or use your account</span>
+    			<input type="email" placeholder="Email" />
+    			<input type="password" placeholder="Password" />
+    			<a href="#">Forgot your password?</a>
+          <button class="first">
+            <a href="home.html" style="color: #FFFFFF">Log In</a>
+          </button>
+    		</form>
+    	</div>
 
-<!-- <footer>
-	<p>
-		Created with <i class="fa fa-heart"></i> by
-		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-		- Read how I created this and how you can join the challenge
-		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
-	</p>
-</footer> -->
-        </div>
-        <script>
-            const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+      <div class="overlay-container">
+    		<div class="overlay">
+    			<div class="overlay-panel overlay-left">
+    				<h1>Welcome Back!</h1>
+    				<p>Already a member? Just log in and do your payments efficiently!</p>
+    				<button class="ghost" id="signIn">Log In</button>
+    			</div>
+    			<div class="overlay-panel overlay-right">
+    				<h1>Hello There!</h1>
+    				<p>New to us? Join now to make your life a lot easier!</p>
+    				<button class="ghost" id="signUp">Sign Up</button>
+    			</div>
+    		</div>
+    	</div>
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+    </div>
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
-        </script>
+    <script type="text/javascript">
+      const signUpButton = document.getElementById('signUp');
+      const signInButton = document.getElementById('signIn');
+      const container = document.getElementById('container');
 
-    </body>
+      signUpButton.addEventListener('click', () => {
+         container.classList.add("right-panel-active");
+      });
+
+      signInButton.addEventListener('click', () => {
+         container.classList.remove("right-panel-active");
+       });
+    </script>
+
+  </body>
 </html>
