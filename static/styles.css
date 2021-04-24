@@ -1,85 +1,8 @@
-/* body {
-    background: #1e2833
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  } */
+/*
+.login{
+  transform: translate(275px, 0px);
+} */
 
-  
-
-  body {
-    align-items: center;
-    background: #1e2833;
-    background-image: url("bg.png");
-    /* color: rgba(0, 0, 0, 0.8); */
-    display: grid;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    height: 100vh;
-    justify-items: center;
-    weight: 100vw;
-  }
-  /* Add a black background color to the top navigation */
-.topnav {
-  background-color: #1e2833;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #0096C7;
-  color: white;
-}
-
-
-  .logo {
-    overflow: auto;
-    background: #48CAE4;
-	background: -webkit-linear-gradient(to right, #0096C7, #0096C7);
-	background: linear-gradient(to right, #0096C7, #0096C7);
-    color: white;
-  }
-
-  .logo img{
-  width: 25%;
-  height: 25%;
-  margin: 0;
-  padding: 0;
-  }
-
-  .clearfix img{
-  width: 25%;
-  height: 25%;
-  margin: 0;
-  padding: 0;
-  }
-
-  .center {
-    padding: 10px;
-    /* vertical centering of <h1> */
-    text-align: center;
-    /* horizontal centering of <h1> */
-  }
 
   .fa {
     padding: 20px;
@@ -430,3 +353,4 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+
