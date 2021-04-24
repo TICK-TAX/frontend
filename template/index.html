@@ -8,35 +8,60 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-      body {
-        background: #1e2833;
-        margin: 0;
-      }
+          body {
+            background: #1e2833;
+            margin: 0;
+          }
 
-      #oneGoogleBar {
-        height: 56px;
-      }
+          body, html {height: 100%;}
 
-      #backgroundImage {
+      .   bg {
+  /* The image used */
+           background-image: url("img_girl.jpg");
+
+  /* Full height */
+           height: 100%;
+
+  /* Center and scale the image nicely */
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+}
+
+      /* div {background-image: url('bg.png');} */
+
+      /* #backgroundImage {
         border: none;
         height: 100%;
         pointer-events: none;
         position: fixed;
         top: 0;
-        visibility: hidden;
-        width: 100%;
-      }
-
-      [show-background-image] #backgroundImage {
         visibility: visible;
+        width: 100%;
+      } */
+
+      button:hover{
+        background-color: #FFFFFF;
+        color: #1e2833;
+        text-decoration: underline;
+      }
+      button.first{
+        background-color: #1e2833;
+      }
+      button.first:hover{
+        background-color: #000000;
+        text-decoration: underline;
+      }
+      .login{
+        transform: translate(275px, 0px);
       }
     </style>
     </head>
     <body>
 
-      <iframe id="backgroundImage"
+      <!-- <iframe id="backgroundImage"
         src="bg.png">
-    </iframe>
+    </iframe> -->
 
         <!-- <div class="clearfix center">
             <h1>TICK-TAX</h1>
@@ -48,11 +73,11 @@
 
 
 
-        <aside class="logo">
+        <!-- <aside class="logo">
           <img src = "logo.png">
-        </aside>
+        </aside> -->
 
-        <div class="topnav">
+        <!-- <div class="topnav">
          <a>Home</a>
          <a>Profile</a>
          <a>Finances</a>
@@ -60,7 +85,9 @@
          <a>Payments</a>
          <a>Dashboard</a>
          <a>Calander</a>
-        </div>
+        </div> -->
+        <!-- <div style="background-image: url("bg.png");"></div> -->
+
 
         <div class="login">
 
@@ -90,7 +117,7 @@
 			<input type="text" placeholder="Name" />
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-        <button>
+        <button class="first">
           <a href="home.html" style="color: #FFFFFF">Sign Up</a>
         </button>
 		</form>
@@ -107,7 +134,7 @@
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
 			<a href="#">Forgot your password?</a>
-      <button>
+      <button class="first">
         <a href="home.html" style="color: #FFFFFF">Log In</a>
       </button>
 		</form>
