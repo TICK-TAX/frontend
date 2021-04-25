@@ -1,74 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  
   <head>
     <title>Index</title>
     <meta charset="utf-8">
+    
     <link rel="stylesheet" href="../static/styles.css">
     <link rel="stylesheet" href="../static/stylesdet.css">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-      /* body, html {height: 100%;} */
-
-      .bg {
-       /* The image used */
-       background-image: url("img_girl.jpg");
-
-       /* Full height */
-       height: 100%;
-
-       /* Center and scale the image nicely */
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: cover;
-      }
-
-     /* div {background-image: url('bg.png');} */
-
-     /* #backgroundImage {
-        border: none;
-        height: 100%;
-        pointer-events: none;
-        position: fixed;
-        top: 0;
-        visibility: visible;
-        width: 100%;
-       } */
-     button:hover{
-        background-color: #FFFFFF;
-        color: #1e2833;
+      button:hover{
+         background-color: #FFFFFF;
+         color: #1e2833;
+         text-decoration: underline;
+       }
+      button.first{
+        background-color: #1e2833;
+       }
+      button.first:hover{
+        background-color: #000000;
         text-decoration: underline;
-     }
-     button.first{
-       background-color: #1e2833;
-     }
-     button.first:hover{
-       background-color: #000000;
-       text-decoration: underline;
-    }
-
+       }
    </style>
-
-
+    
   </head>
+  
+  
   <body>
    
     <div class="upper-logo">
       <img src = "logo3.png">
     </div>
-    
-    <div class="topnav" id="index-topnav">
-     <a href="home.html">Home</a>
-     <a  href="profile.html">Profile</a>
-     <a href="finances.html">Finances</a>
-     <a href="documents.html">Documents</a>
-     <a href="payments.html">Payments</a>
-     <a href="dashboard.html">Dashboard</a>
-     <a href="calander.html">Calander</a>
-    </div>
-
+   
     <div class="float-container">
 
         <div class="float-child-left left-logo">
@@ -146,6 +114,7 @@
       signInButton.addEventListener('click', () => {
          container.classList.remove("right-panel-active");
        });
+      
     </script>
 
   </body>
