@@ -21,10 +21,14 @@
 }
 
 .upper-logo img{
-  width: 20%;
-  height: 20%;
+  width: 17%;
+  height: 17%;
   margin: 25px;
   padding: 0;
+}
+
+.upper-logo{
+  background-color: #1b262c;
 }
 
 .left-logo img{
@@ -36,14 +40,12 @@
 
 
 #index-topnav{
-  margin-bottom: 25px !important;
+  margin-bottom: 60px !important;
   position: relative;
-  left: 200px;
+  left: 185px;
+  top: 30px;
 }
 
-.upper-logo{
-  background-color: #1b262c;
-}
 
   .fa {
     padding: 20px;
