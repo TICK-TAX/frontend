@@ -13,12 +13,18 @@ html {
     float: left;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 110px;
+    left: 54px;
 }
+
 .float-child-right {
     width: 70%;
     float: left;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 20px;
 }
 
 .upper-logo img{
@@ -31,14 +37,13 @@ html {
 
 .upper-logo{
   background-color: #1b262c;
+  margin-top: 0;
 }
 
 
 .left-logo img{
-  width: 40%;
-  height: 40%;
-  position: relative;
-  top: 100px;
+  width: 50%;
+  height: 50%;
 }
 
   .fa {
