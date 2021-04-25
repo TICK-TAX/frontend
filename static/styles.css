@@ -3,6 +3,45 @@
   transform: translate(275px, 0px);
 } */
 
+.float-container {
+    padding: 20px;
+}
+
+.float-child-left {
+    width: 30%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+.float-child-right {
+    width: 70%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+
+.upper-logo img{
+  width: 20%;
+  height: 20%;
+  margin: 25px;
+  padding: 0;
+}
+
+.left-logo img{
+  width: 40%;
+  height: 40%;
+  position: relative;
+  top: 100px;
+}
+
+
+#index-topnav{
+  margin-bottom: 25px !important;
+  position: relative;
+  left: 200px;
+}
+
+
 
   .fa {
     padding: 20px;
