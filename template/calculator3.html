@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TICK-TAX</title>
+        <link rel="stylesheet" href="css/stylesdet.css">
+        <style>
+        h2{text-align: center;}
+        .star{
+          text-align: center;
+        }
+        .oset{
+          display: flex;
+          justify-content: center;
+        }
+        .line{
+          text-align: center;
+        }
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+
+        .topnav{
+          transform: translate(0px, 30px);
+        }
+
+        .signup-container{
+          transform: translate(0px, 150px);
+        }
+        </style>
+    </head>
+    <body>
+      <div class="logo">
+        <img src = "logo1.png">
+      </div>
+
+      <div class="topnav">
+       <a href="home.html">Home</a>
+       <a href="profile.html">Profile</a>
+       <a href="finances.html">Finances</a>
+       <a href="documents.html">Documents</a>
+       <a class="active" href="calculator.html">Calculator</a>
+       <a href="payments.html">Payments</a>
+       <a href="dashboard.html">Dashboard</a>
+       <a href="calendar.html">Calendar</a>
+      </div>
+
+
+
+
+
+        <div class='signup-container'>
+            <!-- <div class='left-container'>
+              <h1>
+                TICTAX
+              </h1>
+            </div> -->
+            <div class='right-container'>
+              <header>
+                <h2>TAX CALCULATION INFO</h2>
+                <br>
+                <br>
+                <br>
+                <form action="calculator.html" method="post">
+                  <p>This is how income tax is calculated in India, under the new tax regime</p>
+                <div class='set'>
+                  <table>
+                    <tr>
+                      <th>Gross Total Income</th>
+                      <th>TAX Rate</th>
+                      <!-- <th>Country</th> -->
+                    </tr>
+                    <tr>
+                      <td>Up to Rs 2,50,000</td>
+                      <td>Exempt from TAX</td>
+                      <!-- <td>Germany</td> -->
+                    </tr>
+                    <tr>
+                      <td>Rs 2,50,000 to Rs 5,00,000 </td>
+                      <td>5% (5% of Rs 5,00,000 less Rs 2,50,000)</td>
+                      <!-- <td>Mexico</td> -->
+                    </tr>
+                    <tr>
+                      <td>Rs 5,00,000 to Rs 7,50,000</td>
+                      <td>10% (10% of Rs 7,50,000 less Rs 5,00,000)</td>
+                      <!-- <td>Austria</td> -->
+                    </tr>
+                    <tr>
+                      <td>Rs 7,50,000 to Rs 10,00,000</td>
+                      <td>15% (15% of Rs 10,00,000 less Rs 7,50,000)</td>
+                      <!-- <td>UK</td> -->
+                    </tr>
+                    <tr>
+                      <td>Rs 10,00,000 to Rs 12,50,000</td>
+                      <td>20% (20% of Rs 12,50,000 less Rs 10,00,000)</td>
+                      <!-- <td>Canada</td> -->
+                    </tr>
+                    <tr>
+                      <td>Rs 12,50,000 to Rs 15,00,000</td>
+                      <td>25% (25% of Rs 15,00,000 less Rs 12,50,000)</td>
+                      <!-- <td>Italy</td> -->
+                    </tr>
+                    <tr>
+                      <td>More than Rs Rs 15,00,000</td>
+                      <td>30% (30% of Rs 20,92,000 less Rs 15,00,000)</td>
+                      <!-- <td>Italy</td> -->
+                    </tr>
+                    <tr>
+                      <td>Cess</td>
+                      <td>4% of total tax </td>
+                      <!-- <td>Italy</td> -->
+                    </tr>
+                    <tr>
+                      <td>Total Income Tax</td>
+                      <td>adding all of the above</td>
+                      <!-- <td>Italy</td> -->
+                    </tr>
+                  </table>
+
+                    <!-- <div class='pets-breed'>
+                      <label for='pets-breed'>Total Income TAX</label>
+                      <input id='pets-breed' placeholder="-" type='text'>
+                    </div>
+                    <div class='pets-birthday'>
+                      <label for='pets-birthday'>Total Gross Income</label>
+                      <input id='pets-birthday' placeholder='total gross income' type='text'>
+                    </div>
+                  </div>
+                  <br>
+                  <p class="star">~~~</p> -->
+                  <!-- <br> -->
+                  <div class='set'>
+                    <!-- <div class='pets-breed'>
+                      <label for='pets-breed'>Income from Other Sources</label>
+                      <input id='pets-breed' placeholder="income from other sources" type='text'>
+                    </div> -->
+                    <!-- <div class='pets-birthday'>
+                      <label for='pets-birthday'>State</label>
+                      <input id='pets-birthday' placeholder='State' type='text'>
+                    </div> -->
+                  <!-- </div>
+                  <div class='set'>
+                    <div class='pets-breed'>
+                      <label for='pets-birthday'>Total Gross Income</label>
+                      <input id='pets-birthday' placeholder="total gross income" type='text'>
+                    </div> -->
+                    <!-- <div class='pets-birthday'>
+                      <label for='pets-birthday'>State</label>
+                      <input id='pets-birthday' placeholder='State' type='text'>
+                    </div> -->
+                  </div>
+                </form>
+              </header>
+              <!-- <footer>
+                <div class='iset'> -->
+                  <!-- <button id='back'>Back</button> -->
+                  <!-- <button id='back'>
+                    <a href="profile.html" style="color: #FFFFFF">Back</a>
+                  </button> -->
+                  <!-- <button id='next'>
+                    <a href="profile3.html" style="color: #FFFFFF">Calculate</a>
+                  </button>
+                </div>
+              </footer> -->
+              <footer>
+                <!-- <div class="line">
+                  <label for="iset" style="font-size: 15px">Display Calculation Method</label>
+                  <br>
+                </div> -->
+                <div class='iset'>
+                  <!-- <button id='back'>Back</button> -->
+                  <button id='next'>
+                    <a href="calculator2.html" style="color: #FFFFFF">Back</a>
+                  </button>
+                </div>
+              </footer>
+            </div>
+          </div>
+
+    </body>
+</html>
