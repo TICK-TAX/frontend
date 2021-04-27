@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TICK-TAX</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesdet.css') }}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <style>
+        h2{text-align: center;}
+        .topnav{
+          transform: translate(0px, 75px);
+        }
+        .right-container{
+          width: 75%;
+          transform: translate(0px, 190px);
+        }
+
+        </style>
+    </head>
+    <body>
+      <div class="logo">
+        <img src="/static/image/logo.png" alt="pic1">
+      </div>
+
+      <div class="topnav">
+       <a href="home.html">Home</a>
+       <a href="profile.html">Profile</a>
+       <a href="finances.html">Finances</a>
+       <a href="documents.html">Documents</a>
+       <a class="active" href="calculator.html">Calculator</a>
+       <a href="payments.html">Payments</a>
+       <a href="dashboard.html">Dashboard</a>
+       <a href="calendar.html">Calendar</a>
+      </div>
+
+            <div class='right-container'>
+              <header>
+                <h2>CALCULATOR</h2>
+                <br>
+                <br>
+                <form action="/count" method="GET" style="width: 500px; border: 1px solid grey; padding: 20px 50px; margin: auto;">
+                <div class='set'>
+                  <div class="input-field">
+                      {% if provided_salary %}
+                          <input id="salary" type="text" name="providedSalary" value="{{ provided_salary }}">
+                      {% else %}
+                          <input id="salary" type="text" name="providedSalary">
+                      {% endif %}
+                      <label for="salary">Annual salary</label>
+                  </div>
+                </div>
+
+                      <label>
+                          <input type="checkbox" class="filled-in" {% if show_description %}checked="checked"{% endif %} name="showDescription" />
+                          <span>Display calculation method for each deduction</span>
+                      </label>
+
+                      {% if is_salary_provided %}
+                          <button style="margin-top: 50px;" class="btn waves-effect waves-light" type="submit" name="action">Update</button>
+                      {% else %}
+                          <button style="margin-top: 50px;" class="btn waves-effect waves-light" type="submit" name="action">Calculate</button>
+                      {% endif %}
+
+                </form>
+              </header>
+              {% if result.salary_before_tax %}
+                  <table class="highlight">
+                      <tr>
+                          <th></th>
+                          <th>Annual</th>
+                          <th>Month</th>
+                          <th>Day</th>
+                      </tr>
+                      <tr>
+                          <td>Salary (before deductions){% if show_description %}<div class="description">Basic value used to count deductions.</div><div class="description">Salary based on value which you provided.</div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_salary_before_tax() }}</td>
+                          <td>Rs{{ result.get_month_salary_before_tax() }}</td>
+                          <td>Rs{{ result.get_day_salary_before_tax() }}</td>
+                      </tr>
+                      <tr>
+                          <td>Summary for taxes{% if show_description %}<div class="description"><span class="bold">tax (0+5+10+15+20+25+30)%</span></div>{% endif %}</td>
+                          <td>Rs({ result.get_annual_tax_0()} + {result.get_annual_tax_5()} + {result.get_annual_tax_10()} + {result.get_annual_tax_15()} + {result.get_annual_tax_20()} + {result.get_annual_tax_25()} + {result.get_annual_tax_30()})</td>
+                          <td>Rs({ result.get_month_tax_0()} + {result.get_month_tax_5()} + {result.get_month_tax_10()} + {result.get_month_tax_15()} + {result.get_month_tax_20()} + {result.get_month_tax_25()} + {result.get_month_tax_30()})</td>
+                          <td>Rs({ result.get_day_tax_0()} + {result.get_day_tax_5()} + {result.get_day_tax_10()} + {result.get_day_tax_15()} + {result.get_day_tax_20()} + {result.get_day_tax_25()} + {result.get_day_tax_30()})</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Tax 0%{% if show_description %}<div class="description">(<span class="blue">salary</span> - {{ calculation_manager.TAX_0_MIN }} x <span class="bold">0%</span></div><div class="description">Tax 0% is for money between Rs{{ calculation_manager.TAX_0_MIN }} (start of first band) and Rs{{ calculation_manager.TAX_5_MIN }} (end of first band) from the salary</div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_tax_0() }}</td>
+                          <td>Rs{{ result.get_month_tax_0() }}</td>
+                          <td>Rs{{ result.get_day_tax_0() }}</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Tax 5%{% if show_description %}<div class="description">(<span class="blue">salary</span> - {{ calculation_manager.TAX_5_MIN }} x <span class="bold">5%</span></div><div class="description">Tax 5% is for money between Rs{{ calculation_manager.TAX_5_MIN }} (end of first band) and Rs{{ calculation_manager.TAX_10_MIN }} (end of second band) from the salary</div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_tax_5() }}</td>
+                          <td>Rs{{ result.get_month_tax_5() }}</td>
+                          <td>Rs{{ result.get_day_tax_5() }}</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Tax 10%{% if show_description %}<div class="description">(<span class="blue">salary</span> - {{ calculation_manager.TAX_10_MIN }} x <span class="bold">10%</span></div><div class="description">Tax 10% is for money between Rs{{ calculation_manager.TAX_10_MIN }} (end of second band) and Rs{{ calculation_manager.TAX_15_MIN }} (end of third band) from the salary</div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_tax_10() }}</td>
+                          <td>Rs{{ result.get_month_tax_10() }}</td>
+                          <td>Rs{{ result.get_day_tax_10() }}</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Tax 15%{% if show_description %}<div class="description">(<span class="blue">salary</span> - {{ calculation_manager.TAX_15_MIN }} x <span class="bold">15%</span></div><div class="description">Tax 15% is for money between Rs{{ calculation_manager.TAX_15_MIN }} (end of third band) and Rs{{ calculation_manager.TAX_20_MIN }} (end of fourth band) from the salary</div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_tax_15() }}</td>
+                          <td>Rs{{ result.get_month_tax_15() }}</td>
+                          <td>Rs{{ result.get_day_tax_15() }}</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Tax 20%{% if show_description %}<div class="description">(<span class="blue">salary</span> - {{ calculation_manager.TAX_20_MIN }} x <span class="bold">20%</span></div><div class="description">Tax 20% is for money between Rs{{ calculation_manager.TAX_20_MIN }} (end of fourth band) and Rs{{ calculation_manager.TAX_25_MIN }} (end of fifth band) from the salary</div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_tax_20() }}</td>
+                          <td>Rs{{ result.get_month_tax_20() }}</td>
+                          <td>Rs{{ result.get_day_tax_20() }}</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Tax 25%{% if show_description %}<div class="description">(<span class="blue">salary</span> - {{ calculation_manager.TAX_25_MIN }} x <span class="bold">25%</span></div><div class="description">Tax 25% is for money between Rs{{ calculation_manager.TAX_25_MIN }} (end of fifth band) and Rs{{ calculation_manager.TAX_30_MIN }} (end of sixth band) from the salary</div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_tax_25() }}</td>
+                          <td>Rs{{ result.get_month_tax_25() }}</td>
+                          <td>Rs{{ result.get_day_tax_25() }}</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Tax 30%{% if show_description %}<div class="description">(<span class="blue">salary</span> - {{ calculation_manager.TAX_30_MIN }} x <span class="bold">30%</span></div><div class="description">Tax 30% is for money above Rs{{ calculation_manager.TAX_30_MIN }} (end of sixth band) from the salary</div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_tax_30() }}</td>
+                          <td>Rs{{ result.get_month_tax_30() }}</td>
+                          <td>Rs{{ result.get_day_tax_30() }}</td>
+                      </tr>
+                      
+                      <tr>
+                          <td>Salary (after deductions){% if show_description %}<div class="description"><span class="blue">salary</span> - <span class="bold">taxes</span></div>{% endif %}</td>
+                          <td>Rs{{ result.get_annual_salary_after_tax() }}</td>
+                          <td>Rs{{ result.get_month_salary_after_tax() }}</td>
+                          <td>Rs{{ result.get_day_salary_after_tax() }}</td>
+                      </tr>
+                  </table>
+              {% endif %}
+              <footer>
+                <div class='set'>
+
+                 </div>
+              </footer>
+            </div>
+
+    </body>
+</html>
