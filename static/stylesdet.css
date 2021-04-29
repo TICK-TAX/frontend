@@ -1,3 +1,40 @@
+table {
+  width:90%;
+  margin-left: 30px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+#t1{
+  display: none;
+  border-style: none;
+  margin-top: 5px;
+}
+
+#t2{
+  display: none;
+  border-style: none;
+  margin-top: 5px;
+}
+
+.dashboard{
+  margin-top: 10px;
+}
+
+.bset-subset{
+  margin-top: 25px;
+}
+
+
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
 * {
   box-sizing: border-box;
@@ -9,13 +46,15 @@
 /* Add a black background color to the top navigation */
 .topnav {
 background-color: #1e2833;
-overflow: hidden;
+position: relative;
+top: 20px;
+/* overflow: hidden; */
 }
 
 
 /* Style the links inside the navigation bar */
 .topnav a {
-float: none;
+/* float: none; */
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
@@ -284,6 +323,7 @@ button.radio-container #pet-gender-female{
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+
 /* Dropdown Button */
 .dropbtn {
   background-color: #1e2833;
@@ -294,11 +334,13 @@ button.radio-container #pet-gender-female{
   border-radius: 23px;
 }
 
+
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
+
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
