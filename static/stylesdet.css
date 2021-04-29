@@ -2,10 +2,12 @@ table {
   width:90%;
   margin-left: 30px;
 }
+
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+
 th, td {
   padding: 5px;
   text-align: left;
@@ -165,16 +167,19 @@ button.radio-container #pet-gender-female{
   z-index: 1;
 }
 
+
 .left-container img {
   filter: sepia(100%);
   width: 70%;
 }
+
 
 .right-container {
   background: #FFFFFF;
   display: grid;
   grid-template-areas: "." ".";
   width: 600px;
+  margin-top: 40px;
 }
 
 .right-container h2:nth-of-type(1) {
