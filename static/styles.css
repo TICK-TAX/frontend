@@ -13,8 +13,8 @@ html {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 110px;
-    left: 54px;
+    top: 160px;
+    left: 60px;
 }
 .float-child-right {
     width: 70%;
@@ -22,24 +22,13 @@ html {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 40px;
-}
-
-.upper-logo img{
-  width: 17%;
-  height: 17%;
-  margin: 25px;
-  padding: 0;
-}
-
-.upper-logo{
-  background-color: #1b262c;
-  margin-top: 0;
+    top: 160px;
+    /* transform: translate(10px, 0px); */
 }
 
 .left-logo img{
-  width: 50%;
-  height: 50%;
+  width: 400px;
+  height: 400px;
 }
 
 
