@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TICK-TAX</title>
-<!--         <link rel="stylesheet" href="css/stylesdet.css"> -->
-        <link rel="stylesheet" href="../static/stylesdet.css">
-        <link rel="stylesheet" href="../static/stylesbody.css">
-        
+        <link rel="stylesheet" href=".../static/stylesdet.css">
         <style>
-            
         h2{text-align: center;}
         .button {
            border: none ;
@@ -29,12 +24,11 @@
            text-decoration: underline;
          }
         </style>
-        
     </head>
     <body>
 
       <div class="logo">
-        <img src = "logo1.png">
+        <img src="D:\takitaki\static\image\logo1.png" alt="pic1">
       </div>
 
       <div class="topnav">
@@ -42,101 +36,24 @@
        <a href="profile.html">Profile</a>
        <a href="finances.html">Finances</a>
        <a href="documents.html">Documents</a>
-       <a href="calculator.html">Calculator</a>
+       <a href="tax.html">Calculator</a>
        <a href="payments.html">Payments</a>
        <a class="active" href="dashboard.html">Dashboard</a>
        <a href="calendar.html">Calendar</a>
       </div>
 
-              <div class="dashboard">
             <div class='right-container'>
               <header>
                 <h2>HISTORY</h2>
-
+                <br>
+                <h4>Previous TAX Returns</h4>
+                <br>
                 <div class='bset'>
-                    <div class="bset-subset">
-                      <!-- <button class="button button1">Salary Bonds and Tax Rates</button> -->
-                      <div class="btn1" onclick="myFunctionone()">
-                         <p class="button">History/Previous Tax Returns</p>
-                      </div>
-                      <table id="t1">
-                        <thead>
-                          <tr>
-                            <th>Tax Returns</th>
-                            <th>Dated</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Tax Return 1</td>
-                            <td>March 16, 2020</td>
-                          </tr>
-                          <tr>
-                            <td>Tax Return 2</td>
-                            <td>February 28, 2019</td>
-                          </tr>
-                          <tr>
-                            <td>Tax Return 3</td>
-                            <td>March 24. 2018</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <div class="bset-subset">
-                       <div class="btn2" onclick="myFunctiontwo()">
-                          <p class="button">Salary Bonds and Tax Rates</p>
-                       </div>
-                       <table id="t2">
-                         <thead>
-                           <tr>
-                             <th>Gross Total Income</th>
-                             <th>Tax Rate</th>
-                           </tr>
-                         </thead>
-                         <tbody>
-                           <tr>
-                             <td>Upto Rs 2,50,000</td>
-                             <td>Exempt from Tax</td>
-                           </tr>
-                           <tr>
-                             <td>Rs 2,50,000 to Rs 5,00,000</td>
-                             <td>5%(5% of Rs 5,00,000 less Rs 2,50,000)</td>
-                           </tr>
-                           <tr>
-                             <td>Rs 5,00,000 to Rs 7,50,000</td>
-                             <td>10%(10% of Rs 7,50,000 less Rs 5,00,000)</td>
-                           </tr>
-                           <tr>
-                             <td>Rs 7,50,000 to Rs 10,00,000</td>
-                             <td>15%(15% of Rs 10,00,000 less Rs 7,50,000)</td>
-                           </tr>
-                           <tr>
-                             <td>Rs 10,00,000 to Rs 12,50,000</td>
-                             <td>20%(20% of Rs 12,50,000 less Rs 10,00,000)</td>
-                           </tr>
-                           <tr>
-                             <td>Rs 12,50,000 to Rs 15,00,000</td>
-                             <td>25%(25% of Rs 15,00,000 less Rs 12,50,000)</td>
-                           </tr>
-                           <tr>
-                             <td>More than Rs 15,00,000</td>
-                             <td>30%(30% of Salary less Rs 15,00,000)</td>
-                           </tr>
-                         </tbody>
-                         <tfoot>
-                           <tr>
-                             <td>Total Income Tax</td>
-                             <td>adding all of the above</td>
-                           </tr>
-                         </tfoot>
-                       </table>
-                    </div>
-
-
-                </div>
+                    <button class="button button1">TAX Return, Dated: March 16, 2020</button>
+                    <button class="button button2">TAX Return, Dated: February 28, 2019</button>
+                    <button class="button button3">TAX Return, Dated: March 24. 2018</button>
+                  </div>
               </header>
-
               <footer>
                 <div class='iset'>
                   <button id='next'>
@@ -146,9 +63,6 @@
               </footer>
             </div>
           </div>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="appdashboard.js" charset="utf-8"></script>
+
     </body>
 </html>
